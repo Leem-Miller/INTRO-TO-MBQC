@@ -1,0 +1,105 @@
+%-------------------------------
+% Document Class
+%-------------------------------
+\documentclass[prb, aps, twocolumn, centering, 12pt]{revtex4-2}
+
+%-------------------------------
+% Encoding & Language
+%-------------------------------
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage[dvipsnames]{xcolor} % Color support
+
+%-------------------------------
+% Fonts & Math
+%-------------------------------
+\usepackage{eulervm}        % Euler fonts
+\usepackage{amsmath, amssymb, mathtools, dsfont, nicefrac}
+\usepackage{gensymb}        % Degree symbol
+\usepackage{bm}              % Bold math symbols
+\usepackage{braket}          % Bra-ket notation
+\renewcommand{\mathbf}{\mathbold} % Optional bold math override
+\renewcommand{\baselinestretch}{1}
+
+%-------------------------------
+% Graphics & Figures
+%-------------------------------
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{
+    shapes.arrows,
+    shapes.geometric,
+    shapes.symbols,
+    arrows.meta,
+    calc,
+    positioning,
+    decorations.pathreplacing
+}
+\usepgflibrary{shadings}    % Shadings for TikZ
+\usepackage{circuitikz}     % Circuits
+\usepackage{float}           % Float positioning
+\usepackage{caption}         % Figure captions
+\captionsetup[figure]{font=footnotesize}
+
+%-------------------------------
+% Tables & Arrays
+%-------------------------------
+\usepackage{array}
+\usepackage{dcolumn}
+
+%-------------------------------
+% Layout & Formatting
+%-------------------------------
+\usepackage[%
+    text={7.25in,10in}
+]{geometry}
+\setlength{\columnsep}{0.5cm}
+\usepackage{indentfirst}     % Indent first paragraph
+
+%-------------------------------
+% Color, Highlighting & Boxes
+%-------------------------------
+\usepackage{soul}            % Highlighting
+\usepackage{color}
+\usepackage[most]{tcolorbox} % Colored boxes
+\usepackage{bbm}             % Blackboard math symbols
+\usepackage{blindtext, lipsum} % Dummy text
+
+%-------------------------------
+% Headers & Footers
+%-------------------------------
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+% \rhead{PHYS 598, Liam Miller\qquad \thepage}
+
+%-------------------------------
+% Titles
+%-------------------------------
+\usepackage{titlesec}
+% \titlespacing{\section}{0pt}{12pt plus 4pt minus 2pt}{4pt plus 2pt minus 2pt}
+% \titlespacing{\subsection}{0pt}{12pt plus 4pt minus 2pt}{4pt plus 2pt minus 2pt}
+% \titlespacing{\subsubsection}{0pt}{12pt plus 4pt minus 2pt}{4pt plus 2pt minus 2pt}
+
+%-------------------------------
+% Hyperlinks
+%-------------------------------
+\usepackage{hyperref}
+% \hypersetup{pdfborder = {0 0 2}}
+
+%-------------------------------
+% Custom Commands
+%-------------------------------
+\newcommand{\hli}{\vspace{.25cm}\rule{\linewidth}{0.4pt}\vspace{.25cm}}
+\newcommand{\m}{\vspace{1cm}}
+\newcommand{\mm}{\vspace{0.01cm}}
+\newcommand{\cm}{\vspace{-0.1cm}}
+\def\andname{\hspace*{-0.5em}}
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+
+\begin{document}
+\title{Intro to MBQC}
+    \author{Liam Miller}
+    %\affiliation{Institute for Quantum Science and Technology and Department of Physics and Astronomy, University of Calgary, Calgary, Alberta T2N 1N4, Canada}
+    \maketitle
+\end{document}
