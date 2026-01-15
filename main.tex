@@ -1,6 +1,3 @@
-%-------------------------------
-% Document Class
-%-------------------------------
 \documentclass[prb, aps, twocolumn, centering, 12pt]{revtex4-2}
 
 %-------------------------------
@@ -98,8 +95,56 @@
 \renewcommand{\thefootnote}{\fnsymbol{footnote}}
 
 \begin{document}
-\title{Intro to MBQC}
-    \author{Liam Miller}
-    %\affiliation{Institute for Quantum Science and Technology and Department of Physics and Astronomy, University of Calgary, Calgary, Alberta T2N 1N4, Canada}
-    \maketitle
+    \title{Intro to MBQC}
+        \author{Liam Miller}
+        \maketitle
+
+    \onecolumngrid
+        Computation is often introduced through concrete machines: logic gates, electronic circuits, and physical hardware.
+        While this perspective is useful in practice, it can hide the underlying structure shared by all models of computation.
+        At its core, computation is not about a particular device, but about how information is represented and transformed.
+
+        In this text, we take a structural approach and view computation as the composition of maps or functions acting on well-defined spaces of information.
+        This viewpoint allows classical and quantum computation to be discussed within a common mathematical language, with the main differences arising from the types of spaces involved and the transformations allowed on them.
+
+        The goal of this text is to provide a clear and mathematically grounded introduction to measurement-based quantum computation (MBQC).
+        The emphasis is on understanding structure rather than hardware, and on using precise definitions without unnecessary technical overhead.
+        Along the way, we will connect MBQC to ideas from tensor networks and symmetry-based descriptions of quantum states, highlighting how familiar tools from linear algebra naturally lead to this model of computation.
+
+        By approaching MBQC from this angle, we hope to make it feel less mysterious and more like a natural extension of ideas already present in classical and circuit-based quantum computation.\\
+
+    \twocolumngrid
+
+    \section{Classical Computation: A Structural View}
+
+        Classical computation provides a useful starting point for developing a structural understanding of computation.
+        Although the physical devices used to perform classical computations are familiar, the mathematical framework underlying them is both simple and powerful.
+        By examining classical computation in abstract terms, we can isolate the essential ingredients common to all computational models: the representation of information, the transformations acting on that information, and the way these transformations are combined to form algorithms.
+
+        In this section, we focus on these ingredients while deliberately setting aside implementation details.
+        This allows us to describe classical computation in a way that will generalize naturally to quantum computation, where the same structural ideas reappear in a different mathematical setting.
+
+        \subsection{Information Spaces}
+
+            We begin by making the notion of information more precise.
+            In a computational setting, information is represented by elements of a set, which we will call an \emph{information space}.
+            Each element of this space corresponds to a possible configuration of the data relevant to a given task.
+
+            In classical computation, information spaces are typically finite sets.
+            For example, a single classical bit is described as an element of the set
+            \[
+            \mathcal{B} = \{0,1\},
+            \]
+            while a register of $n$ bits is described by the Cartesian product $\mathcal{B}^n$.
+            More complicated data structures—such as strings, integers, or finite records—can be modeled using similar constructions.
+
+            At this level, no assumptions are made about how information is physically stored or manipulated.
+            The information space serves only as an abstract description of the possible states the system may occupy.
+
+    \section{Quantum Computation: Linear Algebra Replaces Sets}
+  
+    \section{Measurement-Based Quantum Computing}
+        \subsection{Resource States} 
+            % Measurements as matrices, but what are we measuring?
+
 \end{document}
